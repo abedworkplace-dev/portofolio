@@ -1,0 +1,241 @@
+@media screen and (max-width: 1200px) {
+
+    .container,
+    .cta-bottom {
+        width: 95% !important;
+        margin: auto;
+    }
+
+    .services .cards .card {
+        width: 46%;
+    }
+
+    .about .container img {
+        width: 40%;
+    }
+
+    .about .container .txt {
+        width: 60%;
+    }
+
+    .portfolio .container-projects {
+        gap: 5px;
+        row-gap: 5px;
+    }
+
+    .stacks .container .stacks-logo {
+        gap: 15px;
+        row-gap: 15px;
+    }
+
+    .portfolio .container-projects .projet {
+        min-height: 300px;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media screen and (max-width: 992px) {
+    nav .link {
+        display: none;
+    }
+
+
+    nav .btn-nav {
+        flex-direction: row-reverse;
+    }
+
+    nav .btn-menu {
+        display: block;
+    }
+
+    .herosection .container_hero-section .reseaux {
+        display: none;
+    }
+
+    .nbr-projets {
+        justify-content: left;
+        margin-top: 40px;
+    }
+
+
+    .services .cards {
+        justify-content: center;
+        gap: 20px;
+        row-gap: 20px;
+    }
+
+    .services .cards .card {
+        min-height: 350px;
+    }
+
+    .about .container .presentation {
+        flex-wrap: wrap;
+    }
+
+    .about .container img {
+        width: 70%;
+        margin: auto;
+    }
+
+    .about .container .txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about .container .txt p {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .about .container .txt .btn-contact {
+        display: flex;
+        justify-content: center;
+    }
+
+    .portfolio .container .presentation .container-btn-filters {
+        justify-content: left;
+    }
+
+    .portfolio .container .presentation .filters button {
+        width: 150px;
+        height: 50px;
+    }
+
+    .portfolio .container-projects {
+        gap: 15px;
+        row-gap: 15px;
+    }
+
+    .portfolio .container-projects .projet {
+        width: 49%;
+        padding: 30px 15px 30px 15px;
+        box-sizing: border-box;
+    }
+
+    .tech-card {
+        max-width: 220px;
+    }
+
+    .cta-bottom h2 {
+        font-size: 50px;
+        letter-spacing: -1px;
+        line-height: 60px;
+    }
+
+    .cta-bottom p {
+        line-height: 35px;
+    }
+
+    .br-cta {
+        display: block;
+    }
+
+    footer .copyright {
+        padding-top: 20px;
+    }
+
+    .stacks .container .stacks-grid {}
+
+    .tech-card {
+        padding: 40px 16px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+
+/* =========================
+   TABLETTE
+========================= */
+@media screen and (max-width: 768px) {
+    .portfolio .container-projects .projet {
+        width: 100%;
+    }
+}
+
+/* =========================
+   MOBILE LARGE
+========================= */
+@media screen and (max-width: 576px) {
+    nav .btn-contact {
+        display: none;
+    }
+
+    .herosection .container_hero-section h1 {
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: uppercase;
+    }
+
+    .herosection .container_hero-section .cta {
+        max-width: 100%;
+    }
+
+    .about .container img {
+        width: 100%;
+    }
+
+    .about .container .txt p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+
+
+    .nbr-projets {
+        justify-content: left;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .nbr-projets div {
+        width: 80%;
+        height: 80px;
+    }
+
+    .nbr-projets div .nbr {
+        font-size: 30px;
+        line-height: 80px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+
+    .services .cards .card {
+        width: 100%;
+    }
+
+    .services .cards .card .i {
+        font-size: 30px;
+        padding: 15px;
+        background-color: black;
+    }
+
+    .services .cards .card h4 {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 28px;
+    }
+
+    .services .cards .card p {
+        font-size: 20px;
+        letter-spacing: -0.40px;
+        line-height: 25px;
+    }
+
+    .portfolio .container .presentation .filters button {
+        width: 100px;
+    }
+
+    .stacks .container .stacks-grid {
+        justify-content: center;
+    }
+
+}
+
+/* =========================
+   MOBILE SMALL
+========================= */
+@media screen and (max-width: 375px) {}
