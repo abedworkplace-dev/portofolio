@@ -558,7 +558,6 @@ nav .btn-contact a::after {
   gap: 20px;
   flex-wrap: wrap;
   align-items: center;
-  padding: 30px 0px;
 }
 
 .tech-card {
@@ -567,9 +566,10 @@ nav .btn-contact a::after {
   align-items: center;
   gap: 14px;
   padding: 24px 16px;
+  box-sizing: border-box;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
   background-color: rgb(128, 128, 128, 0.1);
   border: 1px solid black;
   border-radius: 12px;

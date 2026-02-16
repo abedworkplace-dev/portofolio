@@ -23,10 +23,6 @@
         row-gap: 5px;
     }
 
-    .stacks .container .stacks-logo {
-        gap: 15px;
-        row-gap: 15px;
-    }
 
     .portfolio .container-projects .projet {
         min-height: 300px;
@@ -81,12 +77,12 @@
 
     .about .container .txt {
         width: 100%;
-        text-align: center;
     }
 
     .about .container .txt p {
         font-size: 28px;
         line-height: 38px;
+        text-align: center;
     }
 
     .about .container .txt .btn-contact {
@@ -136,14 +132,13 @@
         padding-top: 20px;
     }
 
-    .stacks .container .stacks-grid {}
-
-    .tech-card {
-        padding: 40px 16px;
-        width: 100%;
-        max-width: 300px;
+    .stacks .container .stacks-grid {
+        justify-content: left;
     }
 
+    .tech-card {
+        max-width: 230px;
+    }
 }
 
 /* =========================
@@ -153,14 +148,49 @@
     .portfolio .container-projects .projet {
         width: 100%;
     }
+
+    .stacks .container .stacks-grid {
+        gap: 10px;
+    }
 }
 
 /* =========================
    MOBILE LARGE
 ========================= */
 @media screen and (max-width: 576px) {
+
+    .title {
+        font-size: 33px;
+    }
+
+    .herosection {
+        width: 100%;
+        min-height: 550px;
+        background: url(/images/bg.jpg) top/cover no-repeat;
+    }
+
+    .herosection::before {
+        min-height: 550px;
+    }
+
+    .herosection .container_hero-section p {
+        min-height: 80px;
+    }
+
     nav .btn-contact {
         display: none;
+    }
+
+    nav {
+        padding-top: 0px;
+    }
+
+    .nbr-projets {
+        display: none;
+    }
+
+    .herosection .container_hero-section {
+        padding-top: 200px;
     }
 
     .herosection .container_hero-section h1 {
@@ -173,13 +203,24 @@
         max-width: 100%;
     }
 
+    .about .title,
+    .portfolio .title,
+    .stacks .title {
+        justify-content: center;
+    }
+
+    .about .container .presentation {
+        padding-top: 50px;
+    }
+
     .about .container img {
         width: 100%;
     }
 
     .about .container .txt p {
-        font-size: 22px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
     }
 
 
@@ -191,7 +232,7 @@
     }
 
     .nbr-projets div {
-        width: 80%;
+        width: 100%;
         height: 80px;
     }
 
@@ -200,6 +241,11 @@
         line-height: 80px;
         text-transform: uppercase;
         font-weight: 600;
+    }
+
+    .portfolio .container .presentation .container-btn-filters {
+        justify-content: center;
+        padding-top: 50px;
     }
 
 
@@ -217,20 +263,39 @@
         font-size: 18px;
         letter-spacing: -0.36px;
         line-height: 28px;
+        margin: 0;
+        margin-top: 5px;
     }
 
     .services .cards .card p {
-        font-size: 20px;
-        letter-spacing: -0.40px;
-        line-height: 25px;
+        margin: 0;
+        margin-top: 10px;
     }
 
     .portfolio .container .presentation .filters button {
-        width: 100px;
+        width: 120px;
     }
 
     .stacks .container .stacks-grid {
         justify-content: center;
+        row-gap: 30px;
+        padding-top: 50px;
+    }
+
+    .tech-card {
+        max-width: 300px;
+    }
+
+    .cta-bottom h2 {
+        font-size: 30px;
+        letter-spacing: -0.64px;
+        line-height: 40px;
+    }
+
+    .cta-bottom p {
+        font-size: 25px;
+        letter-spacing: -0.8px;
+        line-height: 28px;
     }
 
 }
