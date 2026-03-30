@@ -121,6 +121,18 @@
 
 
 @media (max-width: 576px) {
+    header nav {
+        padding: 0px;
+    }
+
+    header nav h1 {
+        font-size: 25px;
+    }
+
+    header nav .btn-menu .i {
+        font-size: 25px;
+    }
+
     .hero .txt {
         padding-top: 50px;
     }
