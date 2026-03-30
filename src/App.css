@@ -585,27 +585,27 @@ header nav .btn-menu .i {
 }
 
 .mix.icc .img {
-  background: url(images/icc.png) center/contain no-repeat;
+  background: url(/images/icc.png) center/contain no-repeat;
 }
 
 .mix.ufem .img {
-  background: url(images/ufem.png) center/contain no-repeat;
+  background: url(/images/ufem.png) center/contain no-repeat;
 }
 
 .mix.yadah .img {
-  background: url(images/yadah.png) center/contain no-repeat;
+  background: url(/images/yadah.png) center/contain no-repeat;
 }
 
 .mix.one-piece .img {
-  background: url(images/onepiece.png) center/contain no-repeat;
+  background: url(/images/onepiece.png) center/contain no-repeat;
 }
 
 .mix.kafi .img {
-  background: url(images/kafi.png) center/contain no-repeat;
+  background: url(/images/kafi.png) center/contain no-repeat;
 }
 
 .mix.mediatique .img {
-  background: url(images/mediatique.png) center/contain no-repeat;
+  background: url(/images/mediatique.png) center/contain no-repeat;
 }
 
 
