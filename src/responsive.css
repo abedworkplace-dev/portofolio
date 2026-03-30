@@ -1,0 +1,280 @@
+@media (max-width: 1280px) {
+    .container {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1024px) {
+    header nav .links ul {
+        display: none;
+    }
+
+    header nav .btn-menu a {
+        display: none;
+    }
+
+    header nav .btn-menu .i {
+        display: block;
+        font-size: 35px;
+    }
+
+    .hero .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hero .txt {
+        width: 100%;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero .img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero .img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .resume .content {
+        width: 100%;
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+
+    .card.left .txt {
+        width: 70% !important;
+    }
+
+    .card.left .img {
+        width: 30% !important;
+    }
+
+    .mix {
+        width: 48%;
+    }
+
+    .hero .txt h2 {
+        justify-content: center;
+    }
+
+    .hero .txt h3 {
+        text-align: center;
+    }
+
+    .hero .txt p {
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .hero .txt button {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .contact .contents {
+        gap: 50px;
+    }
+
+    .contact .contents form {
+        width: 100%;
+    }
+
+    .contact .contents .info-reseau {
+        width: 100%;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .stacks-icons-grid {
+        flex-wrap: wrap;
+    }
+
+    .stacks-icons-grid {
+        justify-content: center;
+    }
+
+    .tech-card {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 992px) {}
+
+
+@media (max-width: 768px) {}
+
+
+@media (max-width: 576px) {
+    .hero .txt {
+        padding-top: 50px;
+    }
+
+    .hero .txt h2 {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 28px;
+    }
+
+    .hero .txt h3 br {
+        display: none;
+    }
+
+    .hero .txt h3 {
+        font-size: 35px;
+        line-height: 35px;
+        letter-spacing: -0.70px;
+        margin-top: 20px;
+    }
+
+    .hero .txt p {
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .resume .content {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .cards .card {
+        flex-direction: column-reverse;
+    }
+
+
+    .resume .content {
+        width: 80%;
+    }
+
+
+    .resume .content h6 {
+        font-size: 35px;
+    }
+
+    .resume .content p {
+        font-size: 20px;
+    }
+
+    .resume .content h6 .sign {
+        font-size: 25px;
+    }
+
+    .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .card.left .img {
+        width: 70% !important;
+    }
+
+    .card.left .txt {
+        width: 100% !important;
+    }
+
+    .card.right .txt {
+        width: 100% !important;
+    }
+
+    .cards .card {
+        min-height: 450px;
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+
+    .cards .card .txt h4 {
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .cards .card .txt p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .portofolio .contents .btns {
+        flex-direction: column;
+    }
+
+    .mix {
+        width: 95%;
+        margin: auto;
+    }
+
+    .tech-card {
+        width: 90%;
+        border: none;
+        background-color: transparent;
+    }
+
+    .tech-card:hover {
+        background-color: transparent !important;
+    }
+
+    .stacks-icons-grid {
+        gap: 20px;
+    }
+
+    .cta h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .cta h2 br {
+        display: none;
+    }
+
+    .cta .btn-cta {
+        flex-direction: column;
+    }
+
+    .contact .contents form .inputs {
+        flex-direction: column;
+    }
+
+    .contact .contents form input,
+    .contact .contents form textarea {
+        width: 90%;
+    }
+
+    .contact .contents .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact .contents .info-reseau {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact .contents .d-flex .info h2,
+    .contact .contents .d-flex .info p {
+        text-align: center;
+    }
+
+    .contact .contents .d-flex .icon .i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 376px) {}
+
+@media (max-width: 320px) {}
