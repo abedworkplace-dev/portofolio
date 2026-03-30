@@ -126,7 +126,7 @@
     }
 
     header nav h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     header nav .btn-menu .i {
@@ -166,6 +166,8 @@
         row-gap: 50px;
     }
 
+    .cards .card.left,
+    .cards .card.right,
     .cards .card {
         flex-direction: column-reverse;
     }
@@ -177,7 +179,7 @@
 
 
     .resume .content h6 {
-        font-size: 35px;
+        font-size: 45px;
     }
 
     .resume .content p {
@@ -194,7 +196,17 @@
     }
 
     .card.left .img {
+        width: 100% !important;
+        justify-content: left;
+    }
+
+    .card.right .img {
+        width: 100% !important;
+    }
+
+    .card.right img {
         width: 70% !important;
+        height: auto !important;
     }
 
     .card.left .txt {
@@ -203,6 +215,10 @@
 
     .card.right .txt {
         width: 100% !important;
+    }
+
+    .cards .card .img img {
+        margin-left: -30px;
     }
 
     .cards .card {
@@ -214,11 +230,9 @@
     .cards .card .txt h4 {
         font-size: 30px;
         line-height: 35px;
-        text-align: center;
     }
 
     .cards .card .txt p {
-        text-align: center;
         font-size: 18px;
     }
 
