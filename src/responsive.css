@@ -197,7 +197,6 @@
 
     .card.left .img {
         width: 100% !important;
-        justify-content: left;
     }
 
     .card.right .img {
@@ -217,10 +216,6 @@
         width: 100% !important;
     }
 
-    .cards .card .img img {
-        margin-left: -30px;
-    }
-
     .cards .card {
         min-height: 450px;
         padding: 15px;
@@ -230,10 +225,12 @@
     .cards .card .txt h4 {
         font-size: 30px;
         line-height: 35px;
+        text-align: center;
     }
 
     .cards .card .txt p {
         font-size: 18px;
+        text-align: center;
     }
 
     .portofolio .contents .btns {
@@ -243,10 +240,11 @@
     .mix {
         width: 95%;
         margin: auto;
+        padding-bottom: 30px;
     }
 
     .tech-card {
-        width: 90%;
+        width: 30%;
         border: none;
         background-color: transparent;
     }
@@ -283,7 +281,6 @@
 
     .contact .contents .d-flex {
         flex-direction: column;
-        width: 100%;
     }
 
     .contact .contents .info-reseau {
@@ -298,6 +295,23 @@
 
     .contact .contents .d-flex .icon .i {
         font-size: 30px;
+    }
+
+    .services,.portofolio,.stacks,.cta,.contact{
+        padding-top: 70px;
+    }
+    .portofolio .content {
+        padding-top: 70px;
+        row-gap: 50px;
+    }
+
+    .cards {
+        row-gap: 70px;
+    }
+
+    .cards .card {
+        width: 95%;
+        margin: auto;
     }
 }
 
