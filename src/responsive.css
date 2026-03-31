@@ -245,13 +245,8 @@
 
     .tech-card {
         width: 30%;
-        border: none;
-        background-color: transparent;
     }
 
-    .tech-card:hover {
-        background-color: transparent !important;
-    }
 
     .stacks-icons-grid {
         gap: 20px;
@@ -285,6 +280,7 @@
 
     .contact .contents .info-reseau {
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -297,9 +293,14 @@
         font-size: 30px;
     }
 
-    .services,.portofolio,.stacks,.cta,.contact{
+    .services,
+    .portofolio,
+    .stacks,
+    .cta,
+    .contact {
         padding-top: 70px;
     }
+
     .portofolio .content {
         padding-top: 70px;
         row-gap: 50px;
@@ -312,6 +313,14 @@
     .cards .card {
         width: 95%;
         margin: auto;
+    }
+
+    .contact .contents {
+        padding-top: 50px;
+    }
+
+    footer h1 {
+        font-size: 30px;
     }
 }
 
