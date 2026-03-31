@@ -13,6 +13,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { CiGlobe } from "react-icons/ci";
 import mixitup from "mixitup";
 import { SiGmail } from "react-icons/si";
+import { FaTimes, FaChevronDown } from "react-icons/fa";
 
 function App() {
 
@@ -21,6 +22,13 @@ function App() {
     threshold: 0.5,
   });
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const link1 = useRef(null)
+  const link2 = useRef(null)
+  const link3 = useRef(null)
+  const link4 = useRef(null)
+  const link5 = useRef(null)
 
   const [hasStarted, setHasStarted] = useState(false);
 
@@ -56,6 +64,27 @@ function App() {
   });
 
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
+
+  const handleMenuClick = (e, ref) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    setTimeout(() => {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+  };
+
+
 
 
   return (
@@ -69,16 +98,39 @@ function App() {
 
             <div className="links">
               <ul>
-                <li><a href="">Services</a></li>
-                <li><a href="">A propos</a></li>
-                <li><a href="">Portofolio</a></li>
-                <li><a href="">Témoignages</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="" onClick={(e) => { e.preventDefault(); link1.current.scrollIntoView({ behavior: "smooth" }) }}>Services</a></li>
+                <li><a href="" onClick={(e) => { e.preventDefault(); link2.current.scrollIntoView({ behavior: "smooth" }) }}>A propos</a></li>
+                <li><a href="" onClick={(e) => { e.preventDefault(); link3.current.scrollIntoView({ behavior: "smooth" }) }}>Portofolio</a></li>
+                <li><a href="" onClick={(e) => { e.preventDefault(); link4.current.scrollIntoView({ behavior: "smooth" }) }}>Témoignages</a></li>
+                <li><a href="" onClick={(e) => { e.preventDefault(); link5.current.scrollIntoView({ behavior: "smooth" }) }}>Contact</a></li>
               </ul>
             </div>
 
-            <div className="btn-menu"><a href="pdf/cv.pdf" className='btn' download>Voir mon CV</a><HiMiniBars3BottomRight className='i' /></div>
+            <div className="btn-menu"><a href="pdf/cv.pdf" className='btn' download>Voir mon CV</a><HiMiniBars3BottomRight
+              className='i'
+              onClick={() => setMenuOpen(!menuOpen)}
+            /></div>
           </nav>
+          {/* Menu mobile dropdown */}
+          <div className={`mobile-dropdown-menu ${menuOpen ? 'active' : ''}`}>
+            <div className="mobile-dropdown-content">
+              <ul>
+                <li><a href="" onClick={(e) => handleMenuClick(e, link1)}>Services</a></li>
+                <li><a href="" onClick={(e) => handleMenuClick(e, link2)}>A propos</a></li>
+                <li><a href="" onClick={(e) => handleMenuClick(e, link3)}>Portofolio</a></li>
+                <li><a href="" onClick={(e) => handleMenuClick(e, link4)}>Témoignages</a></li>
+                <li><a href="" onClick={(e) => handleMenuClick(e, link5)}>Contact</a></li>
+              </ul>
+              <div className="mobile-dropdown-footer">
+                <a href="pdf/cv.pdf" className='btn-mobile' download>Voir mon CV</a>
+                <div className="mobile-social">
+                  <a href=""><FaLinkedin /></a>
+                  <a href=""><FaFacebookF /></a>
+                  <a href=""><FaInstagram /></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <div className="hero">
@@ -93,7 +145,7 @@ function App() {
               <p>
                 Tu souhaites marquer ta présence en ligne ou développer ton business en ligne ? Eh bien, tu es au bon endroit ! Je t’aide à créer des solutions digitales performantes, que ce soit pour ton site web, ton application mobile ou ta présence numérique.
               </p>
-              <button>Commencer maintenant</button>
+              <a href='https://wa.me/+2290168364255'>Commencer maintenant</a>
             </div>
             <div className="img">
               <img src="/images/abed.png" alt="" />
@@ -140,7 +192,7 @@ function App() {
         </div>
       </div>
 
-      <div className="services">
+      <div className="services" ref={link1}>
         <div className="container">
           <h6 className="title-small"><span></span>Mes services</h6>
           <h3 className='title'>Ce que je propose</h3>
@@ -187,7 +239,7 @@ function App() {
         </div>
       </div>
 
-      <div className="portofolio">
+      <div className="portofolio" ref={link3}>
         <div className="container">
           <h6 className="title-small"><span></span>Mon portfolio</h6>
           <h3 className='title'>Mon expertise à travers mes projets</h3>
@@ -424,7 +476,7 @@ function App() {
         </div>
       </div>
 
-      <div className="contact">
+      <div className="contact" ref={link5}>
         <div className="container">
           <h6 className="title-small"><span></span>Contact</h6>
           <h3 className='title'>Discutons de votre projet</h3>

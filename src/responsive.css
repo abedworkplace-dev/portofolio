@@ -80,7 +80,8 @@
         margin: auto;
     }
 
-    .hero .txt button {
+    .hero .txt a {
+        width: fit-content;
         display: block;
         margin: auto;
         margin-top: 20px;
