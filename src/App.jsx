@@ -471,8 +471,8 @@ function App() {
         <h2>Alors avez vous un super projet <br />
           en tête ? <span>Discutons-en.</span></h2>
         <div className="btn-cta">
-          <a href="">Ecrivez-moi sur WhatsApp</a>
-          <a href="" className='a-black'>Laissez moi un mail</a>
+          <a href="https://wa.me/+2290168364255">Ecrivez-moi sur WhatsApp</a>
+          <a href="mailto:abnegko@gmail.com" className='a-black'>Laissez moi un mail</a>
         </div>
       </div>
 
