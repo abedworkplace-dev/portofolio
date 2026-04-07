@@ -14,6 +14,8 @@ import { CiGlobe } from "react-icons/ci";
 import mixitup from "mixitup";
 import { SiGmail } from "react-icons/si";
 import { FaTimes, FaChevronDown } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2';
 
 function App() {
 
@@ -31,6 +33,12 @@ function App() {
   const link5 = useRef(null)
 
   const [hasStarted, setHasStarted] = useState(false);
+
+  const [name, setName] = useState("");
+  const [tel, setTel] = useState("");
+  const [email, setEmail] = useState("");
+  const [objet, setObjet] = useState("");
+  const [message, setMessage] = useState("");
 
   if (inView && !hasStarted) {
     setHasStarted(true);
@@ -83,6 +91,55 @@ function App() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }, 300);
   };
+
+
+  function sendmail(e) {
+    e.preventDefault()
+
+    emailjs.send(
+      "service_i8v436d",
+      "template_b9m2cap",
+      {
+        name: name,
+        email: email,
+        tel: tel,
+        objet: objet,
+        message: message
+      },
+      "HwMvvr7DT-GbrxbVP"
+    )
+      .then((res) => {
+        Swal.fire({
+          title: 'MESSAGE ENVOYÉ',
+          text: 'Merci ! Nous avons bien reçu votre message, nous vous répondrons dans un bref délai.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          background: "rgb(253, 245, 236)",
+          color: "#101010",
+          buttonsStyling: false,
+          customClass: {
+            confirmButton: 'my-custom-btn'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.reload();
+            window.scrollTo(0, 0);
+          }
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: 'ERREUR',
+          text: "Une erreur s'est produite. Merci de réessayer !",
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'my-custom-btn'
+          }
+        });
+      });
+  }
+
 
 
 
@@ -482,16 +539,16 @@ function App() {
           <h3 className='title'>Discutons de votre projet</h3>
 
           <div className="contents">
-            <form action="">
+            <form action="" onSubmit={sendmail}>
               <div className="inputs">
-                <input type="text" name="" id="" placeholder='Nom & Prénoms' />
-                <input type="text" name="" id="" placeholder='Adresse mail' />
+                <input type="text" placeholder='Entrer votre nom et prénoms' onChange={(e) => { setName(e.target.value) }} required />
+                <input type="email" placeholder='Entrer votre addresse mail' onChange={(e) => { setEmail(e.target.value) }} required />
               </div>
               <div className="inputs">
-                <input type="text" name="" id="" placeholder='Téléphone' />
-                <input type="text" name="" id="" placeholder='Objet' />
+                <input type="tel" placeholder='Entrer votre numéro de téléphone' onChange={(e) => { setTel(e.target.value) }} required />
+                <input type="text" placeholder='Objet de votre message' onChange={(e) => { setObjet(e.target.value) }} required />
               </div>
-              <div className="inputs"><textarea name="" id="" placeholder='Message'></textarea></div>
+              <div className="inputs"><textarea name="" id="" placeholder='Ecrivez votre message ici...' onChange={(e) => { setMessage(e.target.value) }} required></textarea></div>
               <div className="inputs"><button type='submit'>Envoyer</button></div>
             </form>
             <div className="info-reseau">
@@ -533,7 +590,7 @@ function App() {
               <h1><span>A</span>bed</h1>
             </div>
             <div className="reseaux">
-              <a href=""><FaLinkedin /></a>
+              <a href="www.linkedin.com/in/abed-négo-kodjaou-b8553b342"><FaLinkedin /></a>
               <a href=""><FaFacebookF /></a>
               <a href=""><FaInstagram /></a>
             </div>

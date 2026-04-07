@@ -70,6 +70,10 @@ header nav .btn {
   text-align: center;
 }
 
+
+
+
+
 header nav .btn-menu {
   display: flex;
   align-items: center;
@@ -87,7 +91,9 @@ header nav .btn-menu .i {
   background-color: rgb(253, 245, 236);
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
+
 
 .hero .content {
   display: flex;
@@ -139,7 +145,7 @@ header nav .btn-menu .i {
   font-weight: 300;
 }
 
-.hero .txt a{
+.hero .txt a {
   text-decoration: none;
   min-width: 150px;
   color: white;
@@ -1107,11 +1113,25 @@ footer .reseaux a {
   transform: translateY(0);
 }
 
-.mobile-dropdown-content ul li:nth-child(1) { transition-delay: 0.05s; }
-.mobile-dropdown-content ul li:nth-child(2) { transition-delay: 0.1s; }
-.mobile-dropdown-content ul li:nth-child(3) { transition-delay: 0.15s; }
-.mobile-dropdown-content ul li:nth-child(4) { transition-delay: 0.2s; }
-.mobile-dropdown-content ul li:nth-child(5) { transition-delay: 0.25s; }
+.mobile-dropdown-content ul li:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.mobile-dropdown-content ul li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.mobile-dropdown-content ul li:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.mobile-dropdown-content ul li:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.mobile-dropdown-content ul li:nth-child(5) {
+  transition-delay: 0.25s;
+}
 
 .mobile-dropdown-content ul li a {
   text-decoration: none;
@@ -1180,16 +1200,40 @@ footer .reseaux a {
   header {
     position: relative;
   }
-  
+
   header nav .links {
     display: none;
   }
-  
+
   header nav .btn-menu .i {
     display: block;
   }
-  
+
   header nav .btn-menu .btn {
     display: none;
   }
+}
+
+.my-custom-btn {
+  min-width: 200px;
+  color: white;
+  font-family: "Syne", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: inherit;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+  background: #CE3C13;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 18px 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.swal2-popup {
+  font-family: "Syne", sans-serif;
 }
