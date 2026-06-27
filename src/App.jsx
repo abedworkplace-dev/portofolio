@@ -590,7 +590,7 @@ function App() {
               <h1><span>A</span>bed</h1>
             </div>
             <div className="reseaux">
-              <a href="www.linkedin.com/in/abed-négo-kodjaou-b8553b342"><FaLinkedin /></a>
+              <a href=""><FaLinkedin /></a>
               <a href=""><FaFacebookF /></a>
               <a href=""><FaInstagram /></a>
             </div>
