@@ -1,117 +1,116 @@
 @media (max-width: 1280px) {
-    .container {
-        width: 95%;
-    }
+  .container {
+    width: 95%;
+  }
 }
 
 
 @media (max-width: 1200px) {}
 
 @media (max-width: 1024px) {
-    header nav .links ul {
-        display: none;
-    }
+  header nav .links ul {
+    display: none;
+  }
 
-    header nav .btn-menu a {
-        display: none;
-    }
+  header nav .btn-menu a {
+    display: none;
+  }
 
-    header nav .btn-menu .i {
-        display: block;
-        font-size: 35px;
-    }
+  .btn-burger {
+    display: flex;
+  }
 
-    .hero .content {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .hero .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .hero .txt {
-        width: 100%;
-    }
+  .hero .txt {
+    width: 100%;
+  }
 
-    .hero {
-        height: auto;
-    }
+  .hero {
+    height: auto;
+  }
 
-    .hero .img {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
+  .hero .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-    .hero .img img {
-        width: 100%;
-        height: auto;
-    }
+  .hero .img img {
+    width: 100%;
+    height: auto;
+  }
 
-    .resume .content {
-        width: 100%;
-    }
+  .resume .content {
+    width: 100%;
+  }
 
-    .cards .card {
-        width: 100%;
-    }
+  .cards .card {
+    width: 100%;
+  }
 
-    .card.left .txt {
-        width: 70% !important;
-    }
+  .card.left .txt {
+    width: 70% !important;
+  }
 
-    .card.left .img {
-        width: 30% !important;
-    }
+  .card.left .img {
+    width: 30% !important;
+  }
 
-    .mix {
-        width: 48%;
-    }
+  .mix {
+    width: 48%;
+  }
 
-    .hero .txt h2 {
-        justify-content: center;
-    }
+  .hero .txt h2 {
+    justify-content: center;
+  }
 
-    .hero .txt h3 {
-        text-align: center;
-    }
+  .hero .txt h3 {
+    text-align: center;
+  }
 
-    .hero .txt p {
-        text-align: center;
-        max-width: 90%;
-        margin: auto;
-    }
+  .hero .txt p {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
 
-    .hero .txt a {
-        width: fit-content;
-        display: block;
-        margin: auto;
-        margin-top: 20px;
-    }
+  .hero .txt a {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
 
-    .contact .contents {
-        gap: 50px;
-    }
+  .contact .contents {
+    gap: 50px;
+  }
 
-    .contact .contents form {
-        width: 100%;
-    }
+  .contact .contents form {
+    width: 100%;
+  }
 
-    .contact .contents .info-reseau {
-        width: 100%;
-        flex-direction: row;
-        gap: 50px;
-    }
+  .contact .contents .info-reseau {
+    width: 100%;
+    flex-direction: row;
+    gap: 50px;
+  }
 
-    .stacks-icons-grid {
-        flex-wrap: wrap;
-    }
+  .stacks-icons-grid {
+    flex-wrap: wrap;
+  }
 
-    .stacks-icons-grid {
-        justify-content: center;
-    }
+  .stacks-icons-grid {
+    justify-content: center;
+  }
 
-    .tech-card {
-        width: 40%;
-    }
+  .tech-card {
+    width: 40%;
+  }
 
 }
 
@@ -122,209 +121,700 @@
 
 
 @media (max-width: 576px) {
-    header nav {
-        padding: 0px;
-    }
+  header nav {
+    padding: 20px;
+  }
 
-    header nav h1 {
-        font-size: 30px;
-    }
+  header nav h1 {
+    font-size: 30px;
+  }
 
-    header nav .btn-menu .i {
-        font-size: 25px;
-    }
+  header nav .btn-menu .i {
+    font-size: 25px;
+  }
 
-    .hero .txt {
-        padding-top: 50px;
-    }
+  .hero .txt {
+    padding-top: 50px;
+  }
 
-    .hero .txt h2 {
-        font-size: 18px;
-        letter-spacing: -0.36px;
-        line-height: 28px;
-    }
+  .hero .txt h2 {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 28px;
+  }
 
-    .hero .txt h3 br {
-        display: none;
-    }
+  .hero .txt h3 br {
+    display: none;
+  }
 
-    .hero .txt h3 {
-        font-size: 35px;
-        line-height: 35px;
-        letter-spacing: -0.70px;
-        margin-top: 20px;
-    }
+  .hero .txt h3 {
+    font-size: 35px;
+    line-height: 35px;
+    letter-spacing: -0.70px;
+    margin-top: 20px;
+  }
 
-    .hero .txt p {
-        max-width: 100%;
-        margin-top: 20px;
-        font-size: 18px;
-        line-height: 28px;
-    }
+  .hero .txt p {
+    max-width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+  }
 
-    .resume .content {
-        flex-direction: column;
-        row-gap: 50px;
-    }
+  .resume .content {
+    flex-direction: column;
+    row-gap: 50px;
+  }
 
-    .cards .card.left,
-    .cards .card.right,
-    .cards .card {
-        flex-direction: column-reverse;
-    }
-
-
-    .resume .content {
-        width: 80%;
-    }
+  .cards .card.left,
+  .cards .card.right,
+  .cards .card {
+    flex-direction: column-reverse;
+  }
 
 
-    .resume .content h6 {
-        font-size: 45px;
-    }
-
-    .resume .content p {
-        font-size: 20px;
-    }
-
-    .resume .content h6 .sign {
-        font-size: 25px;
-    }
-
-    .title {
-        font-size: 25px;
-        text-align: center;
-    }
-
-    .card.left .img {
-        width: 100% !important;
-    }
-
-    .card.right .img {
-        width: 100% !important;
-    }
-
-    .card.right img {
-        width: 70% !important;
-        height: auto !important;
-    }
-
-    .card.left .txt {
-        width: 100% !important;
-    }
-
-    .card.right .txt {
-        width: 100% !important;
-    }
-
-    .cards .card {
-        min-height: 450px;
-        padding: 15px;
-        padding-bottom: 50px;
-    }
-
-    .cards .card .txt h4 {
-        font-size: 30px;
-        line-height: 35px;
-        text-align: center;
-    }
-
-    .cards .card .txt p {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .portofolio .contents .btns {
-        flex-direction: column;
-    }
-
-    .mix {
-        width: 95%;
-        margin: auto;
-        padding-bottom: 30px;
-    }
-
-    .tech-card {
-        width: 30%;
-    }
+  .resume .content {
+    width: 80%;
+  }
 
 
-    .stacks-icons-grid {
-        gap: 20px;
-    }
+  .resume .content h6 {
+    font-size: 45px;
+  }
 
-    .cta h2 {
-        font-size: 35px;
-        line-height: 45px;
-    }
+  .resume .content p {
+    font-size: 20px;
+  }
 
-    .cta h2 br {
-        display: none;
-    }
+  .resume .content h6 .sign {
+    font-size: 25px;
+  }
 
-    .cta .btn-cta {
-        flex-direction: column;
-    }
+  .title {
+    font-size: 25px;
+    text-align: center;
+  }
 
-    .contact .contents form .inputs {
-        flex-direction: column;
-    }
+  .card.left .img {
+    width: 100% !important;
+  }
 
-    .contact .contents form input,
-    .contact .contents form textarea {
-        width: 90%;
-    }
+  .card.right .img {
+    width: 100% !important;
+  }
 
-    .contact .contents .d-flex {
-        flex-direction: column;
-    }
+  .card.right img {
+    width: 70% !important;
+    height: auto !important;
+  }
 
-    .contact .contents .info-reseau {
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .card.left .txt {
+    width: 100% !important;
+  }
 
-    .contact .contents .d-flex .info h2,
-    .contact .contents .d-flex .info p {
-        text-align: center;
-    }
+  .card.right .txt {
+    width: 100% !important;
+  }
 
-    .contact .contents .d-flex .icon .i {
-        font-size: 30px;
-    }
+  .cards .card {
+    min-height: 450px;
+    padding: 15px;
+    padding-bottom: 50px;
+  }
 
-    .services,
-    .portofolio,
-    .stacks,
-    .cta,
-    .contact {
-        padding-top: 70px;
-    }
+  .cards .card .txt h4 {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+  }
 
-    .portofolio .content {
-        padding-top: 70px;
-        row-gap: 50px;
-    }
+  .cards .card .txt p {
+    font-size: 18px;
+    text-align: center;
+  }
 
-    .cards {
-        row-gap: 70px;
-    }
+  .portofolio .contents .btns {
+    flex-direction: column;
+  }
 
-    .cards .card {
-        width: 95%;
-        margin: auto;
-    }
+  .mix {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 30px;
+  }
 
-    .contact .contents {
-        padding-top: 50px;
-    }
+  .tech-card {
+    width: 30%;
+  }
 
-    footer h1 {
-        font-size: 30px;
-    }
+
+  .stacks-icons-grid {
+    gap: 20px;
+  }
+
+  .cta h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .cta h2 br {
+    display: none;
+  }
+
+  .cta .btn-cta {
+    flex-direction: column;
+  }
+
+  .contact .contents form .inputs {
+    flex-direction: column;
+  }
+
+  .contact .contents form input,
+  .contact .contents form textarea {
+    width: 90%;
+  }
+
+  .contact .contents .d-flex {
+    flex-direction: column;
+  }
+
+  .contact .contents .info-reseau {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact .contents .d-flex .info h2,
+  .contact .contents .d-flex .info p {
+    text-align: center;
+  }
+
+  .contact .contents .d-flex .icon .i {
+    font-size: 30px;
+  }
+
+  .services,
+  .portofolio,
+  .stacks,
+  .cta,
+  .contact {
+    padding-top: 70px;
+  }
+
+  .portofolio .content {
+    padding-top: 70px;
+    row-gap: 50px;
+  }
+
+  .cards {
+    row-gap: 70px;
+  }
+
+  .cards .card {
+    width: 95%;
+    margin: auto;
+  }
+
+  .contact .contents {
+    padding-top: 50px;
+  }
+
+  footer h1 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 376px) {}
 
 @media (max-width: 320px) {}
+
+
+
+
+
+
+
+
+/* Responsive À propos */
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-sticky-side {
+    position: static;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .ambitions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-showcase-section {
+    padding: 70px 0;
+  }
+
+  .about-card-block {
+    padding: 22px 18px;
+  }
+
+  .about-arch-backdrop {
+    height: 280px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .languages-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .node-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .contact-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-main-desc {
+    max-width: 100%;
+  }
+
+  .contact-card-box {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-showcase-section {
+    padding: 70px 0;
+  }
+
+  .contact-main-title {
+    font-size: 36px;
+  }
+
+  .contact-card-box {
+    padding: 30px 20px;
+    border-radius: 26px;
+  }
+
+  .contact-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE HERO & PATTERNS
+========================================= */
+
+/* 1. Petits écrans / Laptops (<= 1200px) */
+@media (max-width: 1200px) {
+  .hero {
+    height: auto;
+    min-height: 820px;
+  }
+
+  .hero .txt {
+    padding-top: 160px;
+  }
+
+  .hero .txt h3 {
+    font-size: 112px;
+    line-height: 108px;
+  }
+
+  .hero .txt h3 .color {
+    font-size: 94px;
+  }
+
+  .hero .img .me {
+    width: 46%;
+    margin-top: -85px;
+  }
+
+  /* Ajustement des patterns */
+  .pattern-dots {
+    top: 120px;
+    left: 24px;
+    width: 108px;
+    height: 54px;
+  }
+
+  .pattern-tr-glow {
+    width: 340px;
+    height: 340px;
+  }
+
+  .hero-portrait-circle {
+    width: 320px;
+    height: 320px;
+    top: 40px;
+  }
+
+  .hero-portrait-sparks {
+    transform: translateX(-140px);
+    top: 15px;
+  }
+}
+
+/* 2. Tablettes (<= 968px — même breakpoint que ton menu burger) */
+@media (max-width: 968px) {
+  .hero {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 0;
+    padding-top: 80px;
+  }
+
+  /* Le header n'est plus fixed à 968px, donc on réduit le padding-top */
+  .hero .txt {
+    padding-top: 50px;
+  }
+
+  .hero .txt h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .hero .txt h3 {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -1px;
+    margin-top: 40px;
+  }
+
+  .hero .txt h3 .color {
+    font-size: 62px;
+  }
+
+  /* On empile proprement : texte mission -> badges -> photo en bas */
+  .hero .img {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+    gap: 24px;
+  }
+
+  .hero .img .content-left {
+    width: 100%;
+    max-width: 520px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .hero .img .content-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .hero .img .content-left p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  .avatar-group {
+    padding: 16px 0 24px;
+    justify-content: center;
+  }
+
+  /* On protège la taille des avatars */
+  .hero .img .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* On recentre les éléments de droite */
+  .hero .img .content-right {
+    gap: 10px;
+  }
+
+  .figma-cursor {
+    margin-bottom: 6px;
+  }
+
+  .status-badge,
+  .location-badge,
+  .social-medias {
+    margin-left: 0;
+  }
+
+  .social-medias {
+    margin-top: 10px;
+    justify-content: center;
+    display: none;
+  }
+
+  /* La photo passe tout en bas pour être coupée proprement par .hero-curve */
+  .hero .img .me {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: 10px;
+    width: 420px;
+    max-width: 85%;
+    height: auto;
+    order: 3;
+    display: block;
+  }
+
+  /* Patterns sur tablette */
+  .pattern-dots {
+    top: 120px;
+    left: 16px;
+  }
+
+  .pattern-tr-glow {
+    width: 260px;
+    height: 260px;
+    top: -70px;
+    right: -70px;
+  }
+
+  .pattern-bl-blob {
+    width: 130px;
+    height: 130px;
+    bottom: -30px;
+    left: -40px;
+  }
+
+  .pattern-br-arc {
+    width: 260px;
+    height: 260px;
+    bottom: -130px;
+    right: -100px;
+  }
+
+  /* Le cercle et les étincelles restent ancrés à la photo en bas */
+  .hero-portrait-circle {
+    top: auto;
+    bottom: 0;
+    width: 310px;
+    height: 310px;
+  }
+
+  .hero-portrait-sparks {
+    top: auto;
+    bottom: 265px;
+    transform: translateX(-135px);
+  }
+}
+
+/* 3. Mobiles (<= 576px) */
+@media (max-width: 576px) {
+  .hero .txt {
+    padding-top: 100px;
+  }
+
+  .hero .txt h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .hero .txt h3 {
+    font-size: 70px;
+    line-height: 75px;
+    letter-spacing: -0.5px;
+    margin-top: 20px;
+  }
+
+  .hero .txt h3 .color {
+    font-size: 70px;
+  }
+
+  /* Garde le retour à la ligne entre "Développeur" et "Web & Mobile" */
+  .hero .txt h3 br {
+    display: block;
+  }
+
+  .hero .img {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .hero .img .content-left p {
+    font-size: 20px;
+    line-height: 30px;
+
+  }
+
+  .hero .img .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-count {
+    font-size: 22px;
+    line-height: 32px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+  }
+
+  .hero .img .btn {
+    font-size: 14px;
+    gap: 12px;
+    padding: 5px 6px 5px 20px;
+  }
+
+  .hero .img .me {
+    width: 340px;
+    max-width: 82%;
+  }
+
+  .hero-curve {
+    height: 45px;
+  }
+
+  /* Patterns sur mobile */
+  .pattern-dots {
+    display: none;
+  }
+
+  .pattern-tr-glow {
+    width: 200px;
+    height: 200px;
+    top: -60px;
+    right: -60px;
+  }
+
+  .pattern-bl-blob {
+    width: 100px;
+    height: 100px;
+    bottom: -25px;
+    left: -35px;
+  }
+
+  .pattern-br-arc {
+    width: 190px;
+    height: 190px;
+    bottom: -95px;
+    right: -75px;
+  }
+
+  .hero-portrait-circle {
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+  }
+
+  .hero-portrait-sparks {
+    bottom: 205px;
+    transform: translateX(-108px) scale(0.8);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 376px) {
+
+  header nav {
+    padding: 10px;
+  }
+
+  .hero .txt h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .hero .txt h3 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .hero .txt h3 .color {
+    font-size: 40px;
+  }
+
+
+
+  .hero .img .content-left p {
+    font-size: 15px;
+    line-height: 25px;
+
+  }
+
+  .hero .img .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar-count {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero .img .content-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
