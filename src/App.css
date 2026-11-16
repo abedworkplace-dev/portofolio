@@ -1467,11 +1467,11 @@ footer .reseaux a {
   top: calc(100% + 12px);
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(206, 60, 19, 0.15);
+  border: 1px solid rgba(206, 60, 19, 0.25);
   border-radius: 24px;
   max-height: 0;
   overflow: hidden;
@@ -1481,9 +1481,7 @@ footer .reseaux a {
     opacity 0.25s ease,
     visibility 0.25s ease;
   z-index: 1000;
-  background: rgba(255, 255, 255, 1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-color: rgba(206, 60, 19, 0.25);
 }
 
 .mobile-dropdown-menu.active {
