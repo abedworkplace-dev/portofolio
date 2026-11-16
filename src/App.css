@@ -101,6 +101,7 @@ header nav .links ul a:hover {
 .btn:hover svg {
   transform: rotate(-45deg);
 }
+
 .btn.download:hover svg {
   transform: initial;
 }
@@ -393,7 +394,7 @@ header nav .btn-menu .i {
   transform: translateY(3px);
 }
 
-.location-icon{
+.location-icon {
   color: #ce3c13;
   font-size: 15px;
   display: flex;
@@ -1477,9 +1478,12 @@ footer .reseaux a {
   opacity: 0;
   visibility: hidden;
   transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-              opacity 0.25s ease,
-              visibility 0.25s ease;
+    opacity 0.25s ease,
+    visibility 0.25s ease;
   z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(206, 60, 19, 0.25);
 }
 
 .mobile-dropdown-menu.active {
@@ -1545,11 +1549,6 @@ footer .reseaux a {
   font-weight: 700;
   transition: all 0.25s ease;
   box-shadow: 0 4px 15px rgba(206, 60, 19, 0.25);
-}
-
-.mobile-dropdown-footer .btn-mobile:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(206, 60, 19, 0.35);
 }
 
 .mobile-social {
@@ -2038,9 +2037,7 @@ footer .reseaux a {
 }
 
 /* Arche arrière-plan rappelant la structure du CV */
-.about-arch-backdrop {
-  
-}
+.about-arch-backdrop {}
 
 .about-portrait-img {
   width: 90%;

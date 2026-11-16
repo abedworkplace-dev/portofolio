@@ -664,24 +664,28 @@
 
 /* 3. Mobiles (<= 576px) */
 @media (max-width: 576px) {
+  header nav {
+    padding: 10px;
+  }
+
   .hero .txt {
     padding-top: 100px;
   }
 
   .hero .txt h2 {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   .hero .txt h3 {
-    font-size: 70px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 55px;
     letter-spacing: -0.5px;
     margin-top: 20px;
   }
 
   .hero .txt h3 .color {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   /* Garde le retour à la ligne entre "Développeur" et "Web & Mobile" */
@@ -695,21 +699,23 @@
   }
 
   .hero .img .content-left p {
-    font-size: 20px;
-    line-height: 30px;
-
+    font-size: 17px;
+    line-height: 22px;
   }
 
   .hero .img .avatar {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
   .avatar-count {
-    font-size: 22px;
-    line-height: 32px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero .img .content-right {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero .img .btn {
@@ -774,7 +780,7 @@
 
 
 
-@media (max-width: 400px) {
+/*@media (max-width: 400px) {
 
   header nav {
     padding: 10px;
@@ -817,4 +823,4 @@
     align-items: center;
   }
 
-}
+}*/
