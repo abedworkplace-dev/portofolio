@@ -402,10 +402,7 @@
 @media (max-width: 420px) {
 
   .about-photo-card {
-    gap: 0px;
-  }
-  .about-photo-content{
-    margin-top: 0px;
+    gap: 20px;
   }
 }
 
