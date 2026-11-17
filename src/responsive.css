@@ -342,10 +342,13 @@
     gap: 40px;
   }
 
+  .about-portrait-img {
+    width: 100%;
+  }
+
   .about-sticky-side {
     position: static;
-    max-width: 480px;
-    margin: 0 auto;
+    max-width: 500px;
   }
 
   .ambitions-grid {
@@ -379,6 +382,27 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+
+  .about-photo-card {
+    gap: 60px;
+  }
+
+  .about-photo-card {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-showcase-section .title{
+    text-align: left !important;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+  .about-photo-card {
+    gap: 0px;
   }
 }
 
@@ -901,8 +925,6 @@
   }
 
   .services .content .cards .card {
-    width: 100%;
-    min-height: auto;
     padding: 22px 22px 68px;
   }
 
@@ -940,11 +962,17 @@
 
   .services .content .img {
     max-width: 500px;
+    margin-left: -15px;
   }
 
   .services-img-sparks {
     width: 28px;
     height: 28px;
+  }
+
+  .services .content .cards .card {
+    width: 100%;
+    min-height: auto;
   }
 
 

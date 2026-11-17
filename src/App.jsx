@@ -534,7 +534,7 @@ function App() {
 
 
                   <a href="pdf/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn download" download>
-                    Télécharger mon CV complet
+                    Télécharger mon CV
                     <span><FiDownload /></span>
                   </a>
 
