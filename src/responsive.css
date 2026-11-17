@@ -683,9 +683,6 @@
     letter-spacing: -0.5px;
     margin-top: 20px;
   }
-  .hero .txt h3 .creux{
-    -webkit-text-stroke: 1px rgb(0, 0, 0,0.5);
-  }
 
   .hero .txt h3 .color {
     font-size: 45px;
@@ -827,3 +824,128 @@
   }
 
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE - TABLETTES & PETITS ÉCRANS
+   ========================================= */
+@media (max-width: 1024px) {
+  .services {
+    padding: 80px 0;
+  }
+
+  .services .content {
+    flex-direction: column;
+    gap: 45px;
+    padding-top: 40px;
+  }
+
+  .services .content .img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .btn.d-none {
+    display: none !important;
+  }
+
+  .btn.d-block {
+    display: flex !important;
+  }
+
+  .btn.d-block {
+    margin-top: 40px;
+  }
+
+  .services .content .cards {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .services .content .cards .card {
+    width: calc(50% - 8px);
+    min-height: 260px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILES LARGE (<= 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  .services {
+    padding: 65px 0;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .services .content .cards .card {
+    width: 100%;
+    min-height: auto;
+    padding: 22px 22px 68px;
+  }
+
+  .services .content .cards .card:hover {
+    transform: none;
+    /* Évite le saut au toucher sur mobile */
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - PETITS MOBILES (<= 480px)
+   ========================================= */
+@media (max-width: 480px) {
+  .services {
+    padding: 50px 0;
+  }
+
+  .title-badge {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 4px 16px;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-top: 12px;
+  }
+
+  .services .content {
+    padding-top: 30px;
+    gap: 35px;
+  }
+
+  .services .content .img {
+    max-width: 500px;
+  }
+
+  .services-img-sparks {
+    width: 28px;
+    height: 28px;
+  }
+
+
+}

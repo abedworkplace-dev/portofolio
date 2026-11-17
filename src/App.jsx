@@ -398,7 +398,7 @@ function App() {
                   <span className="status-dot"></span>
                   Toujours actif
                 </div>
-                
+
 
                 <div className="location-badge">
                   <span className="location-icon">
@@ -423,15 +423,40 @@ function App() {
 
       {/* SERVICES */}
       <section className='services' ref={link1}>
+        {/* Pointillés carrés en arrière-plan */}
+        <div className="services-patterns" aria-hidden="true">
+          <span className="srv-pattern-dots srv-dots-tr"></span>
+        </div>
+
         <div className="container">
           <div className="title-content center">
             <span className="title-badge"><BsStars /> Mes services</span>
             <h2 className='title'>Des <span>solutions digitales</span> pensées pour vos projets</h2>
           </div>
+
           <div className="content">
             <div className="img">
-              <img src="/images/undraw_essay-writing_nlru.png" alt="" />
+              {/* Étincelles orientées en haut à droite de l'image */}
+              <svg
+                className="services-img-sparks"
+                aria-hidden="true"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <path d="M10 20L13 4" stroke="#CE3C13" strokeWidth="3.2" strokeLinecap="round" />
+                <path d="M16 24L29 11" stroke="#CE3C13" strokeWidth="3.2" strokeLinecap="round" />
+                <path d="M20 31L36 28" stroke="#CE3C13" strokeWidth="3.2" strokeLinecap="round" />
+              </svg>
+
+              <img src="/images/undraw_morning-work_v5jo.png" alt="Illustration services" />
+              <a href="https://wa.me/+2290168364255" target="_blank" rel="noopener noreferrer" className="btn d-none">
+                Demander une prestation
+                <span><FiArrowRight /></span>
+              </a>
             </div>
+
             <div className="cards">
               <div className="card active">
                 <div className="card-icon"><CiGlobe className='i' /></div>
@@ -439,6 +464,7 @@ function App() {
                 <p>Conception et développement d'applications web complètes, modernes et performantes, du frontend au backend, avec des solutions adaptées aux besoins de chaque projet.</p>
                 <span>01</span>
               </div>
+
               <div className="card">
                 <div className="card-icon">
                   <FiSmartphone className='i' />
@@ -450,12 +476,14 @@ function App() {
                 </p>
                 <span className="card-number">02</span>
               </div>
+
               <div className="card">
                 <div className="card-icon"><LuPalette className='i' /></div>
                 <h5>UI/UX Integration</h5>
                 <p>Transformation de maquettes en interfaces modernes, responsives et fidèles aux designs, avec une attention particulière portée à l'expérience utilisateur.</p>
                 <span>03</span>
               </div>
+
               <div className="card">
                 <div className="card-icon"><AiOutlineDatabase className='i' /></div>
                 <h5>API & Intégration</h5>
@@ -464,6 +492,10 @@ function App() {
               </div>
             </div>
           </div>
+          <a href="https://wa.me/+2290168364255" target="_blank" rel="noopener noreferrer" className="btn d-block">
+            Demander une prestation
+            <span><FiArrowRight /></span>
+          </a>
         </div>
       </section>
 

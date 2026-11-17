@@ -1130,9 +1130,41 @@ header nav .btn-menu .i {
   }
 }
 
+
 .services {
   padding: 100px 0px;
+  position: relative;
+  overflow: hidden;
 }
+
+.services .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Couche des pointillés carrés */
+.services-patterns {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Grille carrée de points (5x5 = 84px x 84px) */
+.srv-pattern-dots {
+  position: absolute;
+  width: 200px;
+  height: 72px;
+  background-image: radial-gradient(rgba(235, 130, 68, 0.55) 3px, transparent 3px);
+  background-size: 18px 18px;
+  top: 250px;
+  left: 100px;
+  display: none;
+}
+
+/* Haut-droite */
+
 
 .title-content {
   display: flex;
@@ -1144,6 +1176,12 @@ header nav .btn-menu .i {
   align-items: center;
 }
 
+.title-content.center .title {
+  text-align: center;
+}
+.btn.d-block {
+    display: none !important;
+  }
 .title-badge {
   width: fit-content;
   display: flex;
@@ -1181,11 +1219,25 @@ header nav .btn-menu .i {
 
 .services .content .img {
   width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .services .content .img img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Étincelles SVG placées au coin haut-droite de l'illustration */
+.services-img-sparks {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .services .content .cards {
@@ -1256,7 +1308,6 @@ header nav .btn-menu .i {
 .services .content .cards .card .i {
   font-size: 25px;
   color: #101010;
-
 }
 
 .services .content .cards .card:hover .card-icon {
@@ -1274,7 +1325,6 @@ header nav .btn-menu .i {
 .services .content .cards .card.active:hover .i {
   color: #ce3c13;
 }
-
 
 .services .content .cards .card h5 {
   font-family: "Syne", sans-serif;
@@ -1314,6 +1364,9 @@ header nav .btn-menu .i {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
   transform: scale(1.05) translateX(-4px);
 }
+
+
+
 
 
 
