@@ -404,6 +404,9 @@
   .about-photo-card {
     gap: 0px;
   }
+  .about-photo-content{
+    margin-top: -20px;
+  }
 }
 
 
