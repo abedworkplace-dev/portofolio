@@ -2820,7 +2820,7 @@ footer .reseaux .linkedin {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background-color: #fdf5ec;
+  background-color: #ffffff; /* <-- changé en blanc */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2845,8 +2845,8 @@ footer .reseaux .linkedin {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(206, 60, 19, 0.14) 0%,
-    rgba(253, 245, 236, 0) 70%
+    rgba(206, 60, 19, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70% /* <-- fondu vers le blanc */
   );
   animation: preloaderPulse 2.4s ease-in-out infinite;
   pointer-events: none;
