@@ -105,7 +105,7 @@ function App() {
     }
 
     const startTime = Date.now();
-    const minDuration = 10000; // Durée minimale fluide (1.4s)
+    const minDuration = 1400; // Durée minimale fluide (1.4s)
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
