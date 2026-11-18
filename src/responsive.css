@@ -393,7 +393,7 @@
     margin: 0 auto;
   }
 
-  .about-showcase-section .title{
+  .about-showcase-section .title {
     text-align: left !important;
   }
 }
@@ -406,19 +406,76 @@
   }
 }
 
+/* =========================================
+   RESPONSIVE - SECTION CONTACT
+========================================= */
+
+@media (max-width: 1200px) {
+  .contact-showcase-grid {
+    gap: 40px;
+  }
+
+  .contact-heading {
+    font-size: 40px;
+  }
+}
 
 @media (max-width: 1024px) {
+  .contact-showcase-section {
+    padding: 85px 0 95px;
+  }
+
   .contact-showcase-grid {
     grid-template-columns: 1fr;
     gap: 50px;
   }
 
+  .contact-left-col,
+  .contact-right-col {
+    min-width: 0;
+  }
+
+  .contact-heading {
+    font-size: 38px;
+  }
+
   .contact-main-desc {
     max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .contact-info-list {
+    width: 80%;
+  }
+
+  .contact-info-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .contact-info-item {
+    width: 100%;
   }
 
   .contact-card-box {
-    max-width: 580px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-showcase-section {
+    padding: 70px 0 80px;
+  }
+
+  .contact-heading {
+    font-size: 34px;
+  }
+
+  .contact-card-box {
+    padding: 32px 26px;
+    border-radius: 24px;
   }
 }
 
@@ -427,8 +484,35 @@
     padding: 70px 0;
   }
 
-  .contact-main-title {
-    font-size: 36px;
+  .contact-showcase-grid {
+    gap: 36px;
+  }
+
+  .contact-heading {
+    font-size: 30px;
+    line-height: 1.22;
+    text-align: left;
+  }
+
+  .contact-main-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .contact-info-list {
+    width: 80%;
+    gap: 14px;
+  }
+
+  .contact-info-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-info-item {
+    width: 100%;
+    padding: 12px 16px;
   }
 
   .contact-card-box {
@@ -436,36 +520,21 @@
     border-radius: 26px;
   }
 
-  .contact-info-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+  .form-group-item input,
+  .form-group-item textarea,
+  .form-group-item select {
+    padding: 12px 14px;
+    font-size: 14px;
   }
+
+  .contact-submit-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 6px 5px 22px;
+  }
+
+ 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1120,7 +1189,7 @@
   }
 
   .browser-address {
-    max-width: 130px;
+    max-width: 150px;
     font-size: 10px;
     padding: 3px 8px;
   }
@@ -1129,7 +1198,7 @@
     font-size: 9.5px;
   }
 
-  
+
 
   /* Contenu texte & tags */
   .card-details {
