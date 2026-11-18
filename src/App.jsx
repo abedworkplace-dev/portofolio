@@ -432,7 +432,7 @@ function App() {
                 </div>
 
                 <div className="social-medias">
-                  <a href=""><FaInstagramSquare /></a>
+                  <a href=""><FaInstagram /></a>
                   <a href="" className='linkedin'><FaLinkedin /></a>
                   <a href=""><FaFacebookF /></a>
                 </div>
@@ -1017,25 +1017,26 @@ function App() {
 
                   {/* 1. Nom */}
                   <div className="form-group-item">
-                    <label htmlFor="name">Votre nom complet</label>
+                    <label htmlFor="name">Votre nom et prénoms</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Ex: Jean Dupont"
+                      placeholder="Nom et prénoms"
                     />
                   </div>
 
                   {/* 2. Téléphone ou Email */}
                   <div className="form-group-item">
-                    <label htmlFor="contactInfo">Votre téléphone ou email</label>
+                    <label htmlFor="contactInfo">Votre addresse email</label>
                     <input
                       type="text"
                       id="contactInfo"
                       name="contactInfo"
-                      placeholder="Ex: contact@entreprise.com ou +229..."
+                      placeholder="addresse email"
                     />
                   </div>
+
 
                   {/* 3. Sélection du Service */}
                   <div className="form-group-item">
@@ -1090,9 +1091,9 @@ function App() {
               <h1><span>A</span>bed</h1>
             </div>
             <div className="reseaux">
-              <a href=""><FaLinkedin /></a>
-              <a href=""><FaFacebookF /></a>
-              <a href=""><FaInstagram /></a>
+
+
+              <a href=""><FaInstagram /></a><a href="" className='linkedin'><FaLinkedin /></a><a href=""><FaFacebookF /></a>
             </div>
           </div>
         </div>

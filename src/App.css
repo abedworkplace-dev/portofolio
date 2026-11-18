@@ -1431,7 +1431,15 @@ footer .reseaux a {
   align-items: center;
   justify-content: center;
 }
+footer .reseaux a:hover {
+  background: #CE3C13;
+  color: white;
+}
 
+footer .reseaux .linkedin {
+  background: #CE3C13;
+  color: white;
+}
 
 
 .cta {
@@ -1899,10 +1907,6 @@ footer .reseaux a {
   object-fit: cover;
   object-position: top center;
   transition: transform 0.4s ease;
-}
-
-.showcase-card:hover .mockup-screen img {
-  transform: scale(1.03);
 }
 
 /* Voile noir au survol SANS AUCUN FLOU (l'image reste nette) */
@@ -2695,7 +2699,7 @@ footer .reseaux a {
 
 .form-group-item label {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.2px;
@@ -2800,12 +2804,3 @@ footer .reseaux a {
   transition: transform 250ms ease;
 }
 
-.contact-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-}
-
-/* Animation rotation de l'icône sur hover (exactement comme le header) */
-.contact-submit-btn:hover .btn-icon-circle {
-  transform: rotate(-45deg);
-}
