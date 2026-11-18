@@ -21,6 +21,7 @@ import { MdLocationPin } from "react-icons/md";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { IoStar } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
+import axios from "axios";
 import {
   FiSmartphone,
   FiArrowRight,
@@ -80,10 +81,66 @@ function App() {
   const [hasStarted, setHasStarted] = useState(false);
 
   const [name, setName] = useState("");
-  const [tel, setTel] = useState("");
   const [email, setEmail] = useState("");
-  const [objet, setObjet] = useState("");
+  const [service, setService] = useState("");
   const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+
+  // Gestion du Preloader
+  useEffect(() => {
+    let pageLoaded = document.readyState === "complete";
+    let t1, t2;
+
+    const onLoad = () => {
+      pageLoaded = true;
+    };
+
+    if (!pageLoaded) {
+      window.addEventListener("load", onLoad);
+    }
+
+    const startTime = Date.now();
+    const minDuration = 10000; // Durée minimale fluide (1.4s)
+
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const timeRatio = Math.min(elapsed / minDuration, 1);
+
+      if (pageLoaded && timeRatio >= 1) {
+        setProgress(100);
+        clearInterval(interval);
+        t1 = setTimeout(() => setIsFadingOut(true), 200);
+        t2 = setTimeout(() => setIsLoading(false), 800);
+      } else {
+        const target = Math.min(Math.floor(timeRatio * 92), 92);
+        setProgress((prev) => (target > prev ? target : prev));
+      }
+    }, 30);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      window.removeEventListener("load", onLoad);
+    };
+  }, []);
+
+  // Bloque le scroll pendant le chargement ou quand le menu mobile est ouvert
+  useEffect(() => {
+    if (menuOpen || isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOpen, isLoading]);
 
   if (inView && !hasStarted) {
     setHasStarted(true);
@@ -288,8 +345,90 @@ function App() {
   }, []);
 
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isSending) return;
+
+    setIsSending(true);
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+    try {
+      const response = await axios.post(`${API_URL}/api/contact`, {
+        name,
+        email,
+        service,
+        message,
+      });
+
+      if (response.data.success) {
+        Swal.fire({
+          title: "MESSAGE ENVOYÉ",
+          text: "Merci ! Votre message a bien été envoyé, je vous répondrai dans les plus brefs délais.",
+          icon: "success",
+          confirmButtonText: "OK",
+          background: "rgb(253, 245, 236)",
+          color: "#101010",
+          buttonsStyling: false,
+          customClass: {
+            confirmButton: "my-custom-btn",
+          },
+        });
+
+        // Réinitialiser le formulaire
+        setName("");
+        setEmail("");
+        setService("");
+        setMessage("");
+      }
+    } catch (error) {
+      const errMsg =
+        error.response?.data?.message ||
+        "Impossible d'envoyer le message pour le moment. Merci de réessayer !";
+
+      Swal.fire({
+        title: "ERREUR",
+        text: errMsg,
+        icon: "error",
+        confirmButtonText: "OK",
+        background: "rgb(253, 245, 236)",
+        color: "#101010",
+        buttonsStyling: false,
+        customClass: {
+          confirmButton: "my-custom-btn",
+        },
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+
+
   return (
     <div>
+      {isLoading && (
+        <div className={`preloader ${isFadingOut ? "fade-out" : ""}`} aria-hidden="true">
+          <div className="preloader-glow"></div>
+
+          <div className="preloader-content">
+            <div className="preloader-logo">
+              <span>A</span>bed<span className="preloader-dot">.</span>
+            </div>
+
+            <p className="preloader-subtitle">Développeur Web & Mobile</p>
+
+            <div className="preloader-bar-wrap">
+              <div
+                className="preloader-bar-fill"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+
+            <span className="preloader-percent">{progress}%</span>
+          </div>
+        </div>
+      )}
+
       <header className={isScrolled ? 'scrolled' : ''}>
         <div className="container">
           <nav>
@@ -1013,7 +1152,7 @@ function App() {
             {/* Colonne Droite : Carte Formulaire en orange de marque */}
             <div className="contact-right-col">
               <div className="contact-card-box">
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={handleSubmit}>
 
                   {/* 1. Nom */}
                   <div className="form-group-item">
@@ -1023,26 +1162,37 @@ function App() {
                       id="name"
                       name="name"
                       placeholder="Nom et prénoms"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
                     />
                   </div>
 
-                  {/* 2. Téléphone ou Email */}
+                  {/* 2. Email */}
                   <div className="form-group-item">
-                    <label htmlFor="contactInfo">Votre addresse email</label>
+                    <label htmlFor="contactInfo">Votre adresse email</label>
                     <input
-                      type="text"
+                      type="email"
                       id="contactInfo"
-                      name="contactInfo"
-                      placeholder="addresse email"
+                      name="email"
+                      placeholder="adresse email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
                   </div>
-
 
                   {/* 3. Sélection du Service */}
                   <div className="form-group-item">
                     <label htmlFor="service">Service souhaité</label>
                     <div className="select-wrapper">
-                      <select id="service" name="service" defaultValue="">
+                      <select
+                        id="service"
+                        name="service"
+                        value={service}
+                        onChange={(e) => setService(e.target.value)}
+                        required
+                      >
                         <option value="" disabled>Sélectionner un service</option>
                         <option value="web">Développement Web (React / Fullstack)</option>
                         <option value="mobile">Développement Mobile (React Native / iOS & Android)</option>
@@ -1054,7 +1204,7 @@ function App() {
                     </div>
                   </div>
 
-                  {/* 4. Message (Complété) */}
+                  {/* 4. Message */}
                   <div className="form-group-item">
                     <label htmlFor="message">Votre message</label>
                     <textarea
@@ -1062,13 +1212,20 @@ function App() {
                       name="message"
                       rows="4"
                       placeholder="Décrivez brièvement votre projet, vos besoins techniques ou vos délais..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
                     ></textarea>
                   </div>
 
-                  {/* 5. Bouton Soumettre avec animation hover fidèle au site */}
+                  {/* 5. Bouton Soumettre */}
                   <div className="form-submit-row">
-                    <button type="submit" className="contact-submit-btn">
-                      <span>Envoyer le message</span>
+                    <button
+                      type="submit"
+                      className="contact-submit-btn"
+                      disabled={isSending}
+                    >
+                      <span>{isSending ? "Envoi en cours..." : "Envoyer le message"}</span>
                       <span className="btn-icon-circle">
                         <FaPaperPlane />
                       </span>

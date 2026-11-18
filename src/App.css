@@ -2804,3 +2804,156 @@ footer .reseaux .linkedin {
   transition: transform 250ms ease;
 }
 
+
+
+
+
+
+
+
+
+/* =========================================
+   PRELOADER / PAGE DE CHARGEMENT
+========================================= */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #fdf5ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.6s ease;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  transform: translateY(-24px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(206, 60, 19, 0.14) 0%,
+    rgba(253, 245, 236, 0) 70%
+  );
+  animation: preloaderPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes preloaderPulse {
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.preloader-logo {
+  font-family: "Syne", sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: #101010;
+  letter-spacing: -1px;
+  line-height: 1;
+  animation: logoReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.preloader-logo span {
+  color: #ce3c13;
+}
+
+.preloader-dot {
+  display: inline-block;
+  animation: dotBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.preloader-subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 12px 0 28px;
+}
+
+.preloader-bar-wrap {
+  width: 240px;
+  height: 4px;
+  background: rgba(206, 60, 19, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  background: #ce3c13;
+  border-radius: 999px;
+  transition: width 0.12s ease-out;
+}
+
+.preloader-percent {
+  margin-top: 12px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ce3c13;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 576px) {
+  .preloader-logo {
+    font-size: 44px;
+  }
+
+  .preloader-bar-wrap {
+    width: 190px;
+  }
+}
