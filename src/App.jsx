@@ -165,15 +165,15 @@ function App() {
       title: "ICC Occitanie",
       category: "web",
       categoryLabel: "Plateforme Événementielle",
-      role: "Architecture Fullstack & Billetterie",
+      role: "Développement web & Intégration UI",
       year: "2025",
       status: "En production",
       description: "Plateforme web complète avec agenda dynamique des rassemblements, streaming des cultes et système de réservation en ligne.",
-      stacks: ["React.js", "Node.js", "MySQL", "CSS3"],
+      stacks: ["HTML5", "CSS3", "JavaScript", "PHP"],
       image: "/images/icc.png",
       link: "https://iccoccitanie.com/"
     },
-    {
+    /*{
       id: 2,
       title: "Kafi Express",
       category: "web",
@@ -185,8 +185,8 @@ function App() {
       stacks: ["React.js", "Tailwind CSS", "Express", "REST API"],
       image: "/images/kafi.png",
       link: "https://violet-ibex-368210.hostingersite.com/"
-    },
-    {
+    }*/,
+    /*{
       id: 3,
       title: "Yadah Records",
       category: "web",
@@ -198,21 +198,21 @@ function App() {
       stacks: ["JavaScript", "HTML5", "CSS3", "PHP"],
       image: "/images/yadah.png",
       link: "https://forestgreen-dog-894166.hostingersite.com/index.html"
-    },
+    }*/,
     {
       id: 4,
       title: "One Piece Invest",
       category: "web",
       categoryLabel: "Corporate & Négoce",
-      role: "Conception & Développement Web",
-      year: "2024",
-      status: "En ligne",
+      role: "Développement web & Intégration UI",
+      year: "2025",
+      status: "En production",
       description: "Portail institutionnel sécurisé pour un bureau d’achat et d’exportation de métaux précieux mettant en avant l'éthique et la traçabilité.",
       stacks: ["HTML5", "CSS3", "JavaScript", "PHP"],
       image: "/images/onepiece.png",
       link: "https://onepieceinvest.com/"
     },
-    {
+    /*{
       id: 5,
       title: "UFEM Association",
       category: "web",
@@ -224,19 +224,43 @@ function App() {
       stacks: ["PHP", "MySQL", "JavaScript", "CSS3"],
       image: "/images/ufem.png",
       link: "https://ufem-association.com"
-    },
+    }*/,
     {
       id: 6,
       title: "Médiatique International",
       category: "web",
       categoryLabel: "Cabinet Stratégique",
-      role: "Intégration UI & Performance",
-      year: "2024",
+      role: "Développement web",
+      year: "2025",
       status: "En ligne",
       description: "Site de référence pour un cabinet de conseil en influence et leadership stratégique auprès de décideurs internationaux.",
-      stacks: ["React.js", "CSS Modules", "Node.js"],
+      stacks: ["HTML5", "CSS3", "JavaScript", "PHP"],
       image: "/images/mediatique.png",
       link: "https://limegreen-tapir-822899.hostingersite.com/"
+    }, {
+      id: 7,
+      title: "Central Luxe",
+      category: "web",
+      categoryLabel: "Boutique en ligne",
+      role: "Développement Full Stack",
+      year: "2026",
+      status: "En ligne",
+      description: "Développement Full Stack d'une boutique de montres avec une interface moderne, un back-office d'administration et une API REST connectée à une base de données MySQL pour la gestion des produits et des commandes.",
+      stacks: ["React.js", "Redux", "CSS", "Axios", "Node.js", "Express.js", "MySQL"],
+      image: "/images/central-luxe.png",
+      link: "https://centrale-luxe.vercel.app/"
+    }, {
+      id: 8,
+      title: "Hadithi Publishers",
+      category: "web",
+      categoryLabel: "Édition & Publication",
+      role: "Développement Full Stack",
+      year: "2026",
+      status: "En ligne",
+      description: "Développement Full Stack d'une plateforme d'édition et de publication de livres avec un back-office d'administration, un CRM et une API REST connectée à une base de données MySQL pour la gestion des auteurs, manuscrits et publications.",
+      stacks: ["React.js", "Redux", "Tailwind CSS", "Axios", "Node.js", "Express.js", "MySQL"],
+      image: "/images/hadithi.png",
+      link: "https://linen-cassowary-757431.hostingersite.com/"
     }
   ];
 
@@ -507,7 +531,7 @@ function App() {
 
           <div className="title-content about-section-title">
             <span className="title-badge"><BsStars /> À propos de moi</span>
-            <h2 className="title">Concepteur d'<span>expériences numériques</span> pérennes</h2>
+            <h2 className='title'>Bâtisseur de <span>solutions digitales</span></h2>
           </div>
 
           <div className="about-layout">

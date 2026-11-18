@@ -978,6 +978,26 @@ header nav .btn-menu .i {
   width: 100%;
   height: 100%;
 }
+.hub-node-item.is-active {
+  z-index: 20;
+}
+
+.stacks-section .node-badge .node-title {
+  display: block;
+  font-family: "Syne", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.stacks-section .node-badge .node-role {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #a3a3a3;
+}
 
 .hub-node-item.is-active .node-box {
   transform: translateY(-3px);
@@ -1082,10 +1102,7 @@ header nav .btn-menu .i {
     animation: none !important;
   }
 
-  .core-pulse,
-  .hub-signal {
-    animation: none;
-  }
+  
 }
 
 /* ---------- Mobile ---------- */
