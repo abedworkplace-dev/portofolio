@@ -230,34 +230,8 @@ function App() {
       image: "/images/icc.png",
       link: "https://iccoccitanie.com/"
     },
-    /*{
-      id: 2,
-      title: "Kafi Express",
-      category: "web",
-      categoryLabel: "Fintech & Inclusion",
-      role: "Développement Frontend & API",
-      year: "2024",
-      status: "En production",
-      description: "Solution digitale de financement alternatif et d'inclusion bancaire pensée pour propulser les bâtisseurs et micro-entrepreneurs.",
-      stacks: ["React.js", "Tailwind CSS", "Express", "REST API"],
-      image: "/images/kafi.png",
-      link: "https://violet-ibex-368210.hostingersite.com/"
-    }*/,
-    /*{
-      id: 3,
-      title: "Yadah Records",
-      category: "web",
-      categoryLabel: "Culture & Musique",
-      role: "Expérience Utilisateur & Intégration",
-      year: "2024",
-      status: "En ligne",
-      description: "Vitrine interactive pour un label de musique moderne intégrant le catalogue des artistes, discographies et écoute audio fluide.",
-      stacks: ["JavaScript", "HTML5", "CSS3", "PHP"],
-      image: "/images/yadah.png",
-      link: "https://forestgreen-dog-894166.hostingersite.com/index.html"
-    }*/,
     {
-      id: 4,
+      id: 2,
       title: "One Piece Invest",
       category: "web",
       categoryLabel: "Corporate & Négoce",
@@ -269,21 +243,9 @@ function App() {
       image: "/images/onepiece.png",
       link: "https://onepieceinvest.com/"
     },
-    /*{
-      id: 5,
-      title: "UFEM Association",
-      category: "web",
-      categoryLabel: "Organisation & ONG",
-      role: "Développement Fullstack",
-      year: "2024",
-      status: "En production",
-      description: "Portail associatif officiel destiné à fédérer les églises partenaires en France avec gestion centralisée des adhésions et documents.",
-      stacks: ["PHP", "MySQL", "JavaScript", "CSS3"],
-      image: "/images/ufem.png",
-      link: "https://ufem-association.com"
-    }*/,
+    
     {
-      id: 6,
+      id: 3,
       title: "Médiatique International",
       category: "web",
       categoryLabel: "Cabinet Stratégique",
@@ -295,7 +257,7 @@ function App() {
       image: "/images/mediatique.png",
       link: "https://limegreen-tapir-822899.hostingersite.com/"
     }, {
-      id: 7,
+      id: 4,
       title: "Central Luxe",
       category: "web",
       categoryLabel: "Boutique en ligne",
@@ -307,7 +269,7 @@ function App() {
       image: "/images/central-luxe.png",
       link: "https://centrale-luxe.vercel.app/"
     }, {
-      id: 8,
+      id: 5,
       title: "Hadithi Publishers",
       category: "web",
       categoryLabel: "Édition & Publication",
@@ -968,7 +930,7 @@ function App() {
                 onClick={() => setFilter("web")}
               >
                 <CiGlobe className="tab-icon" />
-                <span>Web Apps</span>
+                <span>Web</span>
                 <span className="tab-count">{countWeb}</span>
               </button>
               <button
