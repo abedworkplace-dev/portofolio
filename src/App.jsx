@@ -243,7 +243,7 @@ function App() {
       image: "/images/onepiece.png",
       link: "https://onepieceinvest.com/"
     },
-    
+
     {
       id: 3,
       title: "Médiatique International",
@@ -363,6 +363,40 @@ function App() {
       setIsSending(false);
     }
   };
+
+
+
+  // 1. À ajouter avec tes autres refs dans App()
+  const visitNotifiedRef = useRef(false);
+
+  // 2. À ajouter avec tes autres useEffect dans App()
+  useEffect(() => {
+    // Optionnel : décommente la ligne suivante pour ne pas recevoir de mail quand tu développes en local
+    // if (import.meta.env.DEV) return;
+
+    if (visitNotifiedRef.current || sessionStorage.getItem("visit_notified")) {
+      return;
+    }
+
+    visitNotifiedRef.current = true;
+    sessionStorage.setItem("visit_notified", "true");
+
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+    axios
+      .post(`${API_URL}/api/visit`, {
+        page: window.location.href,
+        referrer: document.referrer || "Accès direct",
+        language: navigator.language || "Inconnue",
+        platform: navigator.platform || "Inconnu",
+        screen: `${window.screen.width}x${window.screen.height}`,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "Inconnu",
+        userAgent: navigator.userAgent,
+      })
+      .catch(() => {
+        // On ignore silencieusement les erreurs pour ne pas impacter l'expérience visiteur
+      });
+  }, []);
 
 
 
